@@ -505,22 +505,25 @@ const Header = () => {
       }}>
         
         {/* Left - Logo and Brand */}
-        <motion.a
-          href="/"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            textDecoration: 'none',
-            color: '#ffffff',
-            fontSize: '1.8rem',
-            fontWeight: '700',
-            gap: '10px',
-          }}
+        <motion.div
           whileHover={{ scale: 1.05 }}
         >
+          <Link
+            to="/"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              textDecoration: 'none',
+              color: '#ffffff',
+              fontSize: '1.8rem',
+              fontWeight: '700',
+              gap: '10px',
+            }}
+          >
           <Bot size={32} color="#FF6B35" />
           SureWinBot
-        </motion.a>
+          </Link>
+        </motion.div>
 
         {/* Center - Navigation */}
         <div style={{
