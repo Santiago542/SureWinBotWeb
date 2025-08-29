@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { 
   Bot, 
@@ -156,22 +157,28 @@ const Header = () => {
           }}>
             
             {/* Logo */}
-            <motion.a
-              href="/"
+            <motion.div
               style={{
                 display: 'flex',
-                alignItems: 'center',
-                textDecoration: 'none',
-                color: '#ffffff',
-                fontSize: '1.2rem',
-                fontWeight: '700',
-                gap: '8px',
+                alignItems: 'center'
               }}
-              whileHover={{ scale: 1.05 }}
             >
-              <Bot size={24} color="#FF6B35" />
-              SureWinBot
-            </motion.a>
+              <Link
+                to="/"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  textDecoration: 'none',
+                  color: '#ffffff',
+                  fontSize: '1.2rem',
+                  fontWeight: '700',
+                  gap: '8px',
+                }}
+              >
+                <Bot size={24} color="#FF6B35" />
+                SureWinBot
+              </Link>
+            </motion.div>
 
             {/* Hamburger Menu Button */}
             <motion.button
@@ -282,9 +289,9 @@ const Header = () => {
                       Herramientas
                     </h3>
                     {calculadoraItems.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         onClick={() => setIsMobileMenuOpen(false)}
                         style={{
                           display: 'flex',
@@ -307,7 +314,7 @@ const Header = () => {
                       >
                         <item.icon size={16} />
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
 
@@ -326,9 +333,9 @@ const Header = () => {
                       Legal
                     </h3>
                     {legalItems.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         onClick={() => setIsMobileMenuOpen(false)}
                         style={{
                           display: 'flex',
@@ -351,7 +358,7 @@ const Header = () => {
                       >
                         <item.icon size={16} />
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
 
@@ -370,23 +377,22 @@ const Header = () => {
                       Contacto
                     </h3>
                     {contactoItems.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        onClick={(e) => {
-                          if (item.type === 'scroll') {
+                      item.type === 'scroll' ? (
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          onClick={(e) => {
                             handleScroll(e, item.href)
-                          }
-                          setIsMobileMenuOpen(false)
-                        }}
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '12px',
-                          padding: '12px 16px',
-                          color: '#ffffff',
-                          textDecoration: 'none',
-                          fontSize: '0.95rem',
+                            setIsMobileMenuOpen(false)
+                          }}
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '12px',
+                            padding: '12px 16px',
+                            color: '#ffffff',
+                            textDecoration: 'none',
+                            fontSize: '0.95rem',
                           borderRadius: '8px',
                           margin: '4px 0',
                           transition: 'all 0.2s ease'
@@ -401,6 +407,34 @@ const Header = () => {
                         <item.icon size={16} />
                         {item.name}
                       </a>
+                      ) : (
+                        <Link
+                          key={item.name}
+                          to={item.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '12px',
+                            padding: '12px 16px',
+                            color: '#ffffff',
+                            textDecoration: 'none',
+                            fontSize: '0.95rem',
+                            borderRadius: '8px',
+                            margin: '4px 0',
+                            transition: 'all 0.2s ease'
+                          }}
+                          onMouseEnter={(e) => {
+                            e.target.style.backgroundColor = 'rgba(255, 107, 53, 0.1)'
+                          }}
+                          onMouseLeave={(e) => {
+                            e.target.style.backgroundColor = 'transparent'
+                          }}
+                        >
+                          <item.icon size={16} />
+                          {item.name}
+                        </Link>
+                      )
                     ))}
                   </div>
 
