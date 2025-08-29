@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { 
   Bot, 
@@ -19,6 +19,7 @@ import {
 } from 'lucide-react'
 
 const Header = () => {
+  const navigate = useNavigate()
   const [scrolled, setScrolled] = useState(false)
   const [isCalculadoraOpen, setIsCalculadoraOpen] = useState(false)
   const [isLegalOpen, setIsLegalOpen] = useState(false)
@@ -241,7 +242,7 @@ const Header = () => {
                             setIsMobileMenuOpen(false)
                           } else {
                             setIsMobileMenuOpen(false)
-                            window.location.href = item.href
+                            navigate(item.href)
                           }
                         }}
                         style={{
