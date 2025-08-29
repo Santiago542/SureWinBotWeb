@@ -9,6 +9,7 @@ import ValuebetCalculator from './pages/ValuebetCalculator'
 import PaymentCompleted from './pages/PaymentCompleted'
 import PaymentFailed from './pages/PaymentFailed'
 import NotFound from './pages/NotFound'
+import ScrollToTop from './components/ScrollToTop'
 import './App.css'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <Router basename={basename}>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<MainApp />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
