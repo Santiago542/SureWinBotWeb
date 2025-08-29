@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowLeft } from 'lucide-react'
 
@@ -16,21 +17,24 @@ const TermsOfService = () => {
           transition={{ duration: 0.5 }}
         >
           <div style={{ marginBottom: '30px' }}>
-            <motion.a
-              href="/"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                color: '#ffffff',
-                textDecoration: 'none',
-                fontSize: '1rem',
-                marginBottom: '20px'
-              }}
+            <motion.div
               whileHover={{ scale: 1.05 }}
             >
-              <ArrowLeft size={20} style={{ marginRight: '8px' }} />
-              Volver al Inicio
-            </motion.a>
+              <Link
+                to="/"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  color: '#ffffff',
+                  textDecoration: 'none',
+                  fontSize: '1rem',
+                  marginBottom: '20px'
+                }}
+              >
+                <ArrowLeft size={20} style={{ marginRight: '8px' }} />
+                Volver al Inicio
+              </Link>
+            </motion.div>
             <h1 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '10px' }}>
               Términos de Servicio
             </h1>

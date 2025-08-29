@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Bot, Mail, MessageCircle, AlertTriangle, HelpCircle } from 'lucide-react'
 
@@ -66,13 +67,15 @@ const Footer = () => {
           }}
         >
           {/* Legal Sections */}
-          <motion.a 
-            href="/privacy-policy" 
-            style={{ textDecoration: 'none', color: 'inherit' }}
+          <motion.div
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="glass" style={{ padding: '20px', cursor: 'pointer', transition: 'all 0.3s ease' }}>
+            <Link
+              to="/privacy-policy" 
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              <div className="glass" style={{ padding: '20px', cursor: 'pointer', transition: 'all 0.3s ease' }}>
                           <h4 style={{ fontSize: '1.3rem', marginBottom: '12px', color: '#FF6B35', fontWeight: '600' }}>
               Política de Privacidad
             </h4>
@@ -80,16 +83,19 @@ const Footer = () => {
                 Respetamos tu privacidad. Los datos personales se usan solo para la gestión del servicio y nunca se comparten con terceros. 
                 Cumplimos con las regulaciones actuales de protección de datos.
               </p>
-            </div>
-          </motion.a>
+              </div>
+            </Link>
+          </motion.div>
 
-          <motion.a 
-            href="/terms-of-service" 
-            style={{ textDecoration: 'none', color: 'inherit' }}
+          <motion.div
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.2 }}
           >
-            <div className="glass" style={{ padding: '20px', cursor: 'pointer', transition: 'all 0.3s ease' }}>
+            <Link
+              to="/terms-of-service" 
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+              <div className="glass" style={{ padding: '20px', cursor: 'pointer', transition: 'all 0.3s ease' }}>
                           <h4 style={{ fontSize: '1.3rem', marginBottom: '12px', color: '#FF6B35', fontWeight: '600' }}>
               Términos de Servicio
             </h4>
@@ -97,8 +103,9 @@ const Footer = () => {
                 Usar SureWinBot implica aceptar nuestros términos. El bot proporciona información de oportunidades de apuestas pero no garantiza resultados. 
                 Los usuarios son responsables de sus decisiones.
               </p>
-            </div>
-          </motion.a>
+              </div>
+            </Link>
+          </motion.div>
         </motion.div>
 
         {/* Contact Section */}
@@ -123,12 +130,14 @@ const Footer = () => {
             flexWrap: 'nowrap',
             flexDirection: isVerySmall ? 'column' : 'row'
           }}>
-            <motion.a
-              href="/faq"
-              className="btn-secondary"
+            <motion.div
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              style={{ 
+            >
+              <Link
+                to="/faq"
+                className="btn-secondary"
+                style={{ 
                 display: 'flex', 
                 alignItems: 'center', 
                 gap: '6px',
@@ -141,7 +150,8 @@ const Footer = () => {
             >
               <HelpCircle size={16} />
               FAQ
-            </motion.a>
+            </Link>
+            </motion.div>
             <motion.a
               href="https://t.me/SureWinSportsBot"
               target="_blank"
