@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Bot, Home } from 'lucide-react'
 
 const NotFound = () => {
+  const navigate = useNavigate()
   const [countdown, setCountdown] = useState(5)
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCountdown((prev) => {
         if (prev <= 1) {
-          window.location.href = '/'
+          navigate('/')
           return 0
         }
         return prev - 1
@@ -17,7 +19,7 @@ const NotFound = () => {
     }, 1000)
 
     return () => clearInterval(timer)
-  }, [])
+  }, [navigate])
 
   return (
     <div className="animated-gradient" style={{ 
@@ -73,28 +75,29 @@ const NotFound = () => {
           </p>
         </div>
 
-        <motion.a
-          href="/"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            background: 'linear-gradient(45deg, #FF6B35, #F7931E)',
-            color: '#ffffff',
-            padding: '15px 30px',
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <Link
+            to="/"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              background: 'linear-gradient(45deg, #FF6B35, #F7931E)',
+              color: '#ffffff',
+              padding: '15px 30px',
             borderRadius: '25px',
             textDecoration: 'none',
             fontSize: '1.1rem',
             fontWeight: '600',
             gap: '10px'
-          }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
+            }}
+          >
           <Home size={20} />
           Ir a Inicio
-        </motion.a>
-
-        <div style={{ marginTop: '40px' }}>
+          </Link>
+        </motion.div>        <div style={{ marginTop: '40px' }}>
           <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>
             ¿Necesitas ayuda? Contáctanos en Telegram: 
             <a 

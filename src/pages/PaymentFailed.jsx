@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { XCircle, ArrowLeft, RefreshCw } from 'lucide-react'
 
@@ -69,27 +70,30 @@ const PaymentFailed = () => {
           flexWrap: 'wrap',
           marginBottom: '30px' 
         }}>
-          <motion.a
-            href="/"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              background: 'rgba(255,255,255,0.2)',
-              color: '#ffffff',
-              padding: '12px 24px',
-              borderRadius: '25px',
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Link
+              to="/"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                background: 'rgba(255,255,255,0.2)',
+                color: '#ffffff',
+                padding: '12px 24px',
+                borderRadius: '25px',
               textDecoration: 'none',
               fontSize: '1rem',
               fontWeight: '600',
               gap: '8px',
               backdropFilter: 'blur(10px)'
             }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
           >
             <ArrowLeft size={20} />
             Volver al Inicio
-          </motion.a>
+            </Link>
+          </motion.div>
 
           <motion.a
             href="https://t.me/SureWinSportsBot"

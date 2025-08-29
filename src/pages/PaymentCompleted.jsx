@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { CheckCircle, Bot, ArrowRight } from 'lucide-react'
 
@@ -104,22 +105,24 @@ const PaymentCompleted = () => {
           </motion.a>
         </div>
 
-        <motion.a
-          href="/"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            color: 'rgba(255,255,255,0.8)',
-            textDecoration: 'none',
-            fontSize: '1rem',
-            gap: '5px'
-          }}
-          whileHover={{ color: '#ffffff' }}
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         >
+          <Link
+            to="/"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              color: 'rgba(255,255,255,0.8)',
+              textDecoration: 'none',
+              fontSize: '1rem',
+              gap: '5px'
+            }}
+          >
           ← Volver a la Página Principal
-        </motion.a>
-
-        <div style={{ marginTop: '40px' }}>
+          </Link>
+        </motion.div>        <div style={{ marginTop: '40px' }}>
           <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>
             Recibirás un email de confirmación en breve. Para cualquier pregunta, contáctanos en 
             <a 
