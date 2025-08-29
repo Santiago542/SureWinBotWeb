@@ -588,16 +588,15 @@ const Header = () => {
                   }}
                 >
                   {navegacionItems.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      onClick={(e) => {
-                        if (item.type === 'scroll') {
+                    item.type === 'scroll' ? (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        onClick={(e) => {
                           handleScroll(e, item.href)
-                        }
-                        setIsNavegacionOpen(false)
-                      }}
-                      style={{
+                          setIsNavegacionOpen(false)
+                        }}
+                        style={{
                         display: 'block',
                         padding: '14px 20px',
                         color: '#ffffff',
@@ -626,6 +625,31 @@ const Header = () => {
                         {item.name}
                       </div>
                     </a>
+                    ) : (
+                      <Link
+                        key={item.name}
+                        to={item.href}
+                        onClick={() => setIsNavegacionOpen(false)}
+                        style={{
+                          display: 'block',
+                          padding: '12px 16px',
+                          color: '#333',
+                          textDecoration: 'none',
+                          borderRadius: '8px',
+                          transition: 'all 0.2s ease',
+                          fontSize: '0.95rem'
+                        }}
+                      >
+                        <div style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '8px'
+                        }}>
+                          <item.icon size={16} />
+                          {item.name}
+                        </div>
+                      </Link>
+                    )
                   ))}
                 </motion.div>
               )}
@@ -691,9 +715,9 @@ const Header = () => {
                   }}
                 >
                   {calculadoraItems.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
-                      href={item.href}
+                      to={item.href}
                       style={{
                         display: 'block',
                         padding: '14px 20px',
@@ -722,7 +746,7 @@ const Header = () => {
                         <item.icon size={16} />
                         {item.name}
                       </div>
-                    </a>
+                    </Link>
                   ))}
                 </motion.div>
               )}
@@ -788,9 +812,9 @@ const Header = () => {
                   }}
                 >
                   {legalItems.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
-                      href={item.href}
+                      to={item.href}
                       style={{
                         display: 'block',
                         padding: '14px 20px',
@@ -819,7 +843,7 @@ const Header = () => {
                         <item.icon size={16} />
                         {item.name}
                       </div>
-                    </a>
+                    </Link>
                   ))}
                 </motion.div>
               )}
@@ -885,11 +909,12 @@ const Header = () => {
                   }}
                 >
                   {contactoItems.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      onClick={item.type === 'scroll' ? (e) => handleScroll(e, item.href) : null}
-                      style={{
+                    item.type === 'scroll' ? (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        onClick={(e) => handleScroll(e, item.href)}
+                        style={{
                         display: 'block',
                         padding: '14px 20px',
                         color: '#ffffff',
@@ -918,6 +943,32 @@ const Header = () => {
                         {item.name}
                       </div>
                     </a>
+                    ) : (
+                      <Link
+                        key={item.name}
+                        to={item.href}
+                        style={{
+                          display: 'block',
+                          padding: '14px 20px',
+                          color: '#ffffff',
+                          textDecoration: 'none',
+                          fontSize: '0.9rem',
+                          borderBottom: contactoItems.indexOf(item) !== contactoItems.length - 1 
+                            ? '1px solid rgba(255, 255, 255, 0.1)' 
+                            : 'none',
+                          transition: 'all 0.2s ease'
+                        }}
+                      >
+                        <div style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '8px'
+                        }}>
+                          <item.icon size={16} />
+                          {item.name}
+                        </div>
+                      </Link>
+                    )
                   ))}
                 </motion.div>
               )}
