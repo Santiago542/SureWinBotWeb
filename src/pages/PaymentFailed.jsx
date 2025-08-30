@@ -83,15 +83,15 @@ const PaymentFailed = () => {
                 color: '#ffffff',
                 padding: '12px 24px',
                 borderRadius: '25px',
-              textDecoration: 'none',
-              fontSize: '1rem',
-              fontWeight: '600',
-              gap: '8px',
-              backdropFilter: 'blur(10px)'
-            }}
-          >
-            <ArrowLeft size={20} />
-            Volver al Inicio
+                textDecoration: 'none',
+                fontSize: '1rem',
+                fontWeight: '600',
+                gap: '8px',
+                backdropFilter: 'blur(10px)'
+              }}
+            >
+              <ArrowLeft size={20} />
+              Volver al Inicio
             </Link>
           </motion.div>
 
