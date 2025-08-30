@@ -48,7 +48,11 @@ const NotFound = () => {
           fontSize: 'clamp(3rem, 8vw, 6rem)', 
           fontWeight: '900', 
           marginBottom: '20px',
-          textShadow: '0 4px 8px rgba(0,0,0,0.3)'
+          textShadow: '0 4px 8px rgba(0,0,0,0.3)',
+          background: 'linear-gradient(45deg, #FF6B35, #F7931E)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text'
         }}>
           404
         </h1>
@@ -57,7 +61,10 @@ const NotFound = () => {
           fontSize: '2rem', 
           fontWeight: '700', 
           marginBottom: '20px',
-          color: 'rgba(255,255,255,0.9)'
+          background: 'linear-gradient(45deg, #FF6B35, #F7931E)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text'
         }}>
           Página No Encontrada
         </h2>

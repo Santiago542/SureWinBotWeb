@@ -35,7 +35,15 @@ const PrivacyPolicy = () => {
                 Volver al Inicio
               </Link>
             </motion.div>
-            <h1 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '10px' }}>
+            <h1 style={{ 
+              fontSize: '2.5rem', 
+              fontWeight: '700', 
+              marginBottom: '10px',
+              background: 'linear-gradient(45deg, #FF6B35, #F7931E)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>
               Política de Privacidad
             </h1>
             <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1rem' }}>

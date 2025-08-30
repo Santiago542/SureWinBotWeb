@@ -37,7 +37,11 @@ const PaymentCompleted = () => {
           fontSize: '2.5rem', 
           fontWeight: '700', 
           marginBottom: '20px',
-          textShadow: '0 2px 4px rgba(0,0,0,0.3)'
+          textShadow: '0 2px 4px rgba(0,0,0,0.3)',
+          background: 'linear-gradient(45deg, #FF6B35, #F7931E)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text'
         }}>
           ¡Pago Exitoso!
         </h1>
@@ -120,7 +124,7 @@ const PaymentCompleted = () => {
               gap: '5px'
             }}
           >
-          ← Volver a la Página Principal
+          ← Volver a Inicio
           </Link>
         </motion.div>        <div style={{ marginTop: '40px' }}>
           <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>

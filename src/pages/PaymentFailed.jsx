@@ -37,7 +37,11 @@ const PaymentFailed = () => {
           fontSize: '2.5rem', 
           fontWeight: '700', 
           marginBottom: '20px',
-          textShadow: '0 2px 4px rgba(0,0,0,0.3)'
+          textShadow: '0 2px 4px rgba(0,0,0,0.3)',
+          background: 'linear-gradient(45deg, #FF6B35, #F7931E)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text'
         }}>
           Pago Fallido
         </h1>
@@ -70,31 +74,6 @@ const PaymentFailed = () => {
           flexWrap: 'wrap',
           marginBottom: '30px' 
         }}>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Link
-              to="/"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                background: 'rgba(255,255,255,0.2)',
-                color: '#ffffff',
-                padding: '12px 24px',
-                borderRadius: '25px',
-                textDecoration: 'none',
-                fontSize: '1rem',
-                fontWeight: '600',
-                gap: '8px',
-                backdropFilter: 'blur(10px)'
-              }}
-            >
-              <ArrowLeft size={20} />
-              Volver al Inicio
-            </Link>
-          </motion.div>
-
           <motion.a
             href="https://t.me/SureWinSportsBot"
             target="_blank"
@@ -104,12 +83,12 @@ const PaymentFailed = () => {
               alignItems: 'center',
               background: 'linear-gradient(45deg, #FF6B35, #F7931E)',
               color: '#ffffff',
-              padding: '12px 24px',
+              padding: '15px 30px',
               borderRadius: '25px',
               textDecoration: 'none',
-              fontSize: '1rem',
+              fontSize: '1.1rem',
               fontWeight: '600',
-              gap: '8px'
+              gap: '10px'
             }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -119,24 +98,89 @@ const PaymentFailed = () => {
           </motion.a>
         </div>
 
-        <div style={{ marginTop: '40px' }}>
-          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.9rem' }}>
-            ¿Necesitas ayuda? Contacta a nuestro equipo de soporte:
-          </p>
-          <a 
-            href="https://t.me/SureWinSportsBot" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            style={{ 
-              color: '#ffffff', 
-              textDecoration: 'none', 
-              fontSize: '1.1rem',
-              fontWeight: '600'
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <Link
+            to="/"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              color: 'rgba(255,255,255,0.8)',
+              textDecoration: 'none',
+              fontSize: '1rem',
+              gap: '5px'
             }}
           >
-            @SureWinBot
-          </a>
-        </div>
+          ← Volver al Inicio
+          </Link>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="glass"
+          style={{
+            textAlign: 'center',
+            padding: '30px 20px',
+            marginTop: '40px',
+            maxWidth: '500px',
+            margin: '40px auto 0 auto',
+            border: '1px solid rgba(255, 107, 53, 0.2)'
+          }}
+        >
+          <h3 style={{ 
+            color: '#FF6B35', 
+            fontSize: '1.3rem', 
+            marginBottom: '15px',
+            fontWeight: '600'
+          }}>
+            ¿Necesitas ayuda?
+          </h3>
+          <p style={{ 
+            color: 'rgba(255,255,255,0.8)', 
+            marginBottom: '25px',
+            lineHeight: 1.6,
+            fontSize: '0.95rem'
+          }}>
+            Nuestro equipo está aquí para ayudarte. Contáctanos directamente para resolver cualquier problema con el pago.
+          </p>
+          <div style={{ 
+            display: 'flex', 
+            gap: '15px', 
+            justifyContent: 'center', 
+            flexWrap: 'wrap'
+          }}>
+            <motion.a
+              href="https://t.me/SureWinSportsBot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+              style={{
+                fontSize: '0.95rem',
+                padding: '12px 20px'
+              }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              Contactar por Telegram
+            </motion.a>
+            <motion.a
+              href="mailto:support@surewinbot.com"
+              className="btn-secondary"
+              style={{
+                fontSize: '0.95rem',
+                padding: '12px 20px'
+              }}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              Enviar Email
+            </motion.a>
+          </div>
+        </motion.div>
       </motion.div>
     </div>
   )
