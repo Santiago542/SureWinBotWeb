@@ -386,7 +386,7 @@ const Hero = () => {
               fontWeight: 'bold',
               fontSize: 'clamp(1.6rem, 5vw, 2.4rem)'
             }}>
-              Pasa de Apostar a <span style={{ color: '#FF6B35' }}>Invertir</span>
+              De Apostar → <span style={{ color: '#FF6B35' }}>A Invertir</span>
             </span>
           </motion.h1>
 
