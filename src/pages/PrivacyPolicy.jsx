@@ -74,7 +74,6 @@ const PrivacyPolicy = () => {
               SureWinBot está diseñado para proteger tu privacidad. <strong>Nunca recopilamos ni te pediremos</strong>:
             </p>
             <ul style={{ paddingLeft: '20px', lineHeight: 1.6, color: 'rgba(255,255,255,0.95)', textAlign: 'left' }}>
-              <li>Direcciones de correo electrónico personales</li>
               <li>Números de teléfono móvil</li>
               <li>Información de tarjetas de crédito o débito</li>
               <li>Direcciones físicas o domicilios</li>
@@ -139,11 +138,7 @@ const PrivacyPolicy = () => {
               Contáctanos
             </h2>
             <p style={{ lineHeight: 1.6 }}>
-              Si tienes alguna pregunta sobre esta Política de Privacidad, por favor contáctanos en:
-            </p>
-            <p style={{ marginTop: '10px' }}>
-              <strong>Email:</strong> privacy@surewin.bot<br />
-              <strong>Telegram:</strong> @SureWinBot
+              Si tienes alguna pregunta sobre esta Política de Privacidad, por favor contáctanos.
             </p>
           </div>
         </motion.div>

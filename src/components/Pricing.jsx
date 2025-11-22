@@ -32,15 +32,16 @@ const Pricing = () => {
       popular: false
     },
     {
-      name: "VIP Semanal",
-      price: "€9",
-      period: "/semana", 
-      description: "Estupendo para probar",
+      name: "ULTIMATE",
+      price: "€39",
+      period: "/mes",
+      description: "Para inversores serios",
       features: [
         "Surebets & Valuebets FREE",
         "Apuestas VIP ilimitadas",
+        "Middlebets sin restricciones",
         "Limpiador de Freebets",
-        "ChatBot de IA",
+        "Buscador de apuestas",
         "Filtros avanzados",
         "Alertas en tiempo real",
         "Soporte prioritario",
@@ -48,18 +49,14 @@ const Pricing = () => {
       popular: true
     },
     {
-      name: "VIP Mensual",
+      name: "PRO",
       price: "€29",
-      period: "/mes",
-      description: "Para inversores serios",
+      period: "/mes", 
+      description: "Estupendo para probar",
       features: [
-        "Un 20% más barato",
         "Surebets & Valuebets FREE",
         "Apuestas VIP ilimitadas",
         "Limpiador de Freebets",
-        "ChatBot de IA",
-        "Filtros avanzados",
-        "Alertas en tiempo real",
         "Soporte prioritario",
       ],
       popular: false
@@ -252,7 +249,7 @@ const Pricing = () => {
               </ul>
 
               <motion.a
-                href="https://t.me/SureWinSportsBot"
+                href="https://t.me/SurebetWinningBot"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"

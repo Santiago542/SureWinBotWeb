@@ -85,7 +85,7 @@ const PaymentCompleted = () => {
           marginBottom: '30px' 
         }}>
           <motion.a
-            href="https://t.me/SureWinSportsBot"
+            href="https://t.me/SurebetWinningBot"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -130,7 +130,7 @@ const PaymentCompleted = () => {
           <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>
             Recibirás un email de confirmación en breve. Para cualquier pregunta, contáctanos en 
             <a 
-              href="https://t.me/SureWinSportsBot" 
+              href="https://t.me/SurebetWinningBot" 
               target="_blank" 
               rel="noopener noreferrer"
               style={{ color: '#FF6B35', textDecoration: 'none', marginLeft: '5px' }}

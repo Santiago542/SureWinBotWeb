@@ -75,7 +75,7 @@ const PaymentFailed = () => {
           marginBottom: '30px' 
         }}>
           <motion.a
-            href="https://t.me/SureWinSportsBot"
+            href="https://t.me/SurebetWinningBot"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -154,7 +154,7 @@ const PaymentFailed = () => {
             flexWrap: 'wrap'
           }}>
             <motion.a
-              href="https://t.me/SureWinSportsBot"
+              href="https://t.me/SurebetWinningBot"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"

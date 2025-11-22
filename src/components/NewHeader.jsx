@@ -442,7 +442,7 @@ const Header = () => {
                   {/* Empezar Ahora Button */}
                   <div style={{ textAlign: 'center', margin: '12px 0' }}>
                     <motion.a
-                      href="https://t.me/SureWinSportsBot"
+                      href="https://t.me/SurebetWinningBot"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setIsMobileMenuOpen(false)}
@@ -981,7 +981,7 @@ const Header = () => {
 
         {/* Right - CTA Button */}
         <motion.a
-          href="https://t.me/SureWinSportsBot"
+          href="https://t.me/SurebetWinningBot"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-primary"

@@ -400,7 +400,7 @@ const Hero = () => {
             style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '30px' }}
           >
             <motion.a
-              href="https://t.me/SureWinSportsBot"
+              href="https://t.me/SurebetWinningBot"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"

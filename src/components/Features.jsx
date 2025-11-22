@@ -120,7 +120,7 @@ const Features = () => {
               Comienza tu viaje de inversión sin riesgos hoy con el bot de arbitraje más avanzado disponible.
             </p>
             <motion.a
-              href="https://t.me/SureWinSportsBot"
+              href="https://t.me/SurebetWinningBot"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"

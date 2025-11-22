@@ -172,7 +172,7 @@ const HowItWorks = () => {
               Únete a SureWinBot hoy y comienza tu viaje de ganancias garantizadas
             </p>
             <motion.a
-              href="https://t.me/SureWinSportsBot"
+              href="https://t.me/SurebetWinningBot"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"

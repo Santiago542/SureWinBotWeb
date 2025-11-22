@@ -108,7 +108,7 @@ const NotFound = () => {
           <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>
             ¿Necesitas ayuda? Contáctanos en Telegram: 
             <a 
-              href="https://t.me/SureWinSportsBot" 
+              href="https://t.me/SurebetWinningBot" 
               target="_blank" 
               rel="noopener noreferrer"
               style={{ color: '#FF6B35', textDecoration: 'none', marginLeft: '5px' }}
